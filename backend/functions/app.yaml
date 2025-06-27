@@ -9,4 +9,3 @@ automatic_scaling:
 
 env_variables:
   NODE_ENV: "production"
-EOF
