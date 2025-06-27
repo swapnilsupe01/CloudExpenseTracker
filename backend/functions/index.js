@@ -1,12 +1,15 @@
 const express = require('express');
 const { BigQuery } = require('@google-cloud/bigquery');
 const admin = require('firebase-admin');
+const serviceAccount = require('./firebase-key.json'); // 🔑 load credentials
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Initialize Firebase Admin
+// Initialize Firebase Admin SDK
 admin.initializeApp({
-  credential: admin.credential.cert(require('./firebase-key.json'))
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://cloudexpensepro.firebaseio.com" // ✅ use your actual project ID
 });
 const db = admin.firestore();
 
@@ -22,7 +25,7 @@ app.get('/', (req, res) => {
   res.send('VM backend is working!');
 });
 
-// Route to move latest expense from Firestore to BigQuery
+// Sync latest expense to BigQuery
 app.post('/sync-latest-expense', async (req, res) => {
   try {
     const snapshot = await db.collection('expenses')
