@@ -46,3 +46,5 @@ Trigger /sync-latest-expense API to move latest Firestore entry to BigQuery.
 
 ![image alt](https://github.com/swapnilsupe01/CloudExpenseTracker/blob/8ffc505b0708de5386bd21ffcc5964d05e6bd950/image%201.png)
 
+![image alt](https://github.com/swapnilsupe01/CloudExpenseTracker/blob/666cffb030223d4ac591ad197f0f1b463fc2b4c4/image%202.png)
+
