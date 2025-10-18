@@ -31,6 +31,11 @@ Backend syncs latest Firestore entry to BigQuery via @google-cloud/bigquery
 ✅ Hosting
 Frontend deployed using nginx (/var/www/html)
 Backend runs with node index.js on port 8080
+
+✅ Networking (Firewall & VPN)
+Configured firewall rules to allow inbound HTTP (port 80) and backend (port 8080).
+Enabled VPN access (optional) for secure remote administration of the VM and backend endpoints.
+
 🧪 Testing
 Open: http://34.100.135.108/
 
