@@ -43,3 +43,6 @@ Submit an expense → Firestore → sync to BigQuery
 
 Trigger /sync-latest-expense API to move latest Firestore entry to BigQuery.
 
+
+![image alt](https://github.com/swapnilsupe01/CloudExpenseTracker/blob/8ffc505b0708de5386bd21ffcc5964d05e6bd950/image%201.png)
+
